@@ -2,6 +2,17 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.1.
 
+## Deployment
+
+The application is deployed as a static Angular site on GitHub Pages:
+
+```text
+https://zribiahmed2005.github.io/showroom-auto/
+```
+
+Every push to the `master` branch triggers the workflow in
+`.github/workflows/deploy-pages.yml`.
+
 ## Development server
 
 To start a local development server, run:
