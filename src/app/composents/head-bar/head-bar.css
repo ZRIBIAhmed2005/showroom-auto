@@ -1,0 +1,24 @@
+.header {
+    padding: 3.5rem 1.5rem;
+    color: #eff6ff;
+    background: linear-gradient(135deg, #020617, #172554 65%, #1d4ed8);
+    text-align: center;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: #93c5fd;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.header p:last-child {
+    margin: 0.75rem 0 0;
+    color: #bfdbfe;
+}

@@ -1,0 +1,37 @@
+<div class="search-panel">
+    <label for="car-search">Search for a vehicle</label>
+    <div class="search-field">
+        <input
+                id="car-search"
+                type="search"
+                placeholder="Brand or model..."
+                #searchInput
+                (input)="selectAuto(searchInput.value)"
+        >
+        <fa-icon [icon]="faMagnifyingGlass" aria-hidden="true"></fa-icon>
+    </div>
+</div>
+
+<div class="cars-container">
+    @for (auto of selectedAutos; track auto.id) {
+        <article class="auto-card">
+                <div class="image-wrapper">
+                    <img [src]="'images/' + auto.photo" [alt]="auto.brand + ' ' + auto.model">
+                </div>
+                <div class="details">
+                    <p class="brand">{{ auto.brand }}</p>
+                    <h2>{{ auto.model }}</h2>
+                    <dl>
+                        <div><dt>Power</dt><dd>{{ auto.power }} hp</dd></div>
+                        <div><dt>Price</dt><dd>{{ auto.price }} TND</dd></div>
+                        <div><dt>Stock</dt><dd>{{ auto.availability }} unit(s)</dd></div>
+                    </dl>
+                    <button type="button" (click)="selectCar(auto)">
+                        View details
+                    </button>
+                </div>
+        </article>
+    } @empty {
+        <p class="empty-state">No vehicle matches your search.</p>
+    }
+</div>
